@@ -7,7 +7,7 @@ function App(){
   const[todos,setTodos]=useState([]);
   const fetchTodos=async ()=>{
     try{
-      const response=await axios.get("http://localhost:5000/todos");
+      const response=await axios.get("https://todo-api-u8o0.onrender.com/todos");
       setTodos(response.data);
     }
     catch(error){
@@ -17,7 +17,7 @@ function App(){
 
   const addTodo = async (task) => {
     try {
-      const response = await axios.post("http://localhost:5000/todos", {
+      const response = await axios.post("https://todo-api-u8o0.onrender.com/todos", {
         task,
       });
       setTodos([...todos, response.data]);
@@ -28,7 +28,7 @@ function App(){
 
   const updateTodo = async (id, completed) => {
     try {
-      const response = await axios.put(`http://localhost:5000/todos/${id}`, {
+      const response = await axios.put(`https://todo-api-u8o0.onrender.com/todos/${id}`, {
         completed,
       });
       setTodos(
@@ -43,7 +43,7 @@ function App(){
 
   const deleteTodo = async (id) => {
     try {
-      await axios.delete(`http://localhost:5000/todos/${id}`);
+      await axios.delete(`https://todo-api-u8o0.onrender.com/todos/${id}`);
       setTodos(todos.filter((todo) => todo._id !== id));
     } catch (error) {
       console.error("Error deleting todo:", error);
