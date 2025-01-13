@@ -1,0 +1,96 @@
+body {
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.App h1 {
+  text-align: center;
+}
+
+#top {
+  background-color:turquoise;
+  border-bottom: 5px solid black;
+}
+
+form {
+  display: flex;
+  justify-self: center;
+  gap: 20px;
+  margin: 20px;
+}
+
+input {
+  all: unset;
+  min-width: 300px;
+  padding: 15px;
+  background-color: #fff;
+  border-radius: 20px;
+  border: none;
+}
+
+button {
+  padding: 10px;
+  border-radius: 20px;
+  border: none;
+  background-color: #fff;
+}
+
+button:hover{
+  cursor: pointer;
+}
+
+#bottom {
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+  background-color: #333;
+}
+
+#bottom ul{
+  all: unset;
+}
+
+#bottom li{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px;
+  margin-left: 20px;
+  margin-right: 20px;
+  background-color:#f9f9f9;
+  border: 2px solid black;
+  border-radius: 10px;
+  font-size: large;
+}
+
+#bottom li span{
+  flex: 1;
+  margin: 10px;
+}
+
+#bottom li button{
+  margin: 10px;
+  border: 2px solid transparent;
+}
+
+#bottom li button:hover{
+  color: aqua;
+  border: 2px solid black;
+}
+
+#complete{
+  color: #fff;
+  background-color: green;
+}
+
+
+#delete{
+  color: #fff;
+  background-color: red;
+}
